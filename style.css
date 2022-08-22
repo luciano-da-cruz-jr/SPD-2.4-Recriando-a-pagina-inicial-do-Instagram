@@ -1,0 +1,383 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+}
+
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.instagram-phone img {
+    height: 30rem; /*height: 50rem;*/
+}
+
+.slide-photo
+{
+    height: 330px;
+    width: 196px;
+    border-right: 6px solid white;
+    position: absolute;
+    z-index: 1;
+    margin-left: 130px;  
+    margin-top: 10px;     
+}
+
+.trs {
+    -webkit-transition:all ease-out 0.5s;
+    -moz-transition:all ease-out 0.5s;
+    -o-transition:all ease-out 0.5s;
+    -ms-transition:all ease-out 0.5s;
+    transition:all ease-out 0.5s;
+}
+
+#slider 
+{
+    position: relative;
+    z-index: 1;
+}
+
+#slider a 
+{ 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+#slider a img
+{
+    max-width: 190px;
+    max-height: 330px;
+}
+
+.ativo {
+    opacity: 1!important; 
+    filter:alpha(opacity=100)!important;
+}
+
+/*controladores*/
+.next {right: 10px;}
+.next:before,.next:after {left: 21px;}
+.next:before {
+    -webkit-transform: rotate(-42deg);
+    top: 5px;
+}
+.next:after {
+    -webkit-transform: rotate(-132deg);
+    top: 19px;
+}
+.next:before,.next:after,.prev:before,.prev:after {content: "";
+    height: 20px;
+    background: #fff;
+    width: 1px;
+    position: absolute;
+}
+
+.prev {left: 10px;}
+.prev:before,.prev:after {left: 18px;}
+.prev:before {
+    -webkit-transform: rotate(42deg);
+    top: 5px;
+}
+.prev:after {
+    -webkit-transform: rotate(132deg);
+    top: 19px;
+}
+
+figure:hover span 
+{
+    opacity: 0.76;
+    filter:alpha(opacity=76);
+}
+
+figure 
+{
+    max-width: 937px;
+	height: 354px;
+	position: relative;
+	overflow: hidden;		
+}
+
+.instagram-continue {
+    display: flex;
+    align-items: center; /* horizontal */
+    justify-content: space-around; /* vertical */
+    flex-direction: column;
+    width: 50%;
+    min-height: 34rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1) {
+    min-height: 19rem;
+}
+
+.group:nth-child(2) {
+    margin-top: 10px;
+}
+
+.instagram-logo {
+    height: 3rem;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    height: 6rem;
+}
+
+.instagram-login {
+    background-color: #0095f6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+    width: 270px;
+    text-align: center;
+}
+
+.instagram-logout {
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+.not-account {
+    color: rgb(160, 160, 160);
+}
+
+.link-blue {
+    color: #0095f6;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1) {
+    background-image: url('./img/apple-button.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('./img/googleplay-button.png');
+}
+
+.rodape
+{
+    height: 100px;
+    width: 0 auto;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+/* Pertence somente ao login.html */
+
+.login
+{
+    margin-top: 20px;
+}
+
+.login input
+{
+    width: 270px;
+    height: 40px;
+    padding-left: 5px;
+    border: 1px solid rgb(228, 222, 222);
+    border-radius: 5px;
+}
+
+.login input::placeholder
+{
+    color: gray;
+}
+
+.ou
+{
+    margin-top: 10px;
+    display: flex;
+    color: rgb(223, 220, 220);
+}
+
+.ou .line-left
+{
+    border: 1px solid rgb(223, 220, 220);
+    height: 1px;
+    width: 115px;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.ou .line-right
+{
+    border: 1px solid rgb(223, 220, 220);
+    height: 1px;
+    width: 115px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.link-face
+{
+    width: 100%;   
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.link-face span
+{        
+    width: 200px;
+}
+
+.link-face a
+{    
+      width: 100%;  
+}
+
+.link-face .p-div
+{
+    color: #265c80;    
+    text-align: center;
+    width: auto;
+    display: flex;  
+    position: absolute;  
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+.link-face img
+{  
+    max-width: 45px;
+    max-width: 45px;    
+}
+
+.link-face .img-div
+{
+    display: flex;
+    position: absolute;
+}
+
+.link-revovery-pass
+{
+    margin-top: 20px;
+    display: flex;
+}
+
+.link-revovery-pass p
+{
+    text-decoration: none;
+    font-size: 12px;
+    color: #265c80;
+}
+
+.link-inscreva-se
+{
+    width: 100%;
+    height: 20px;
+}
+
+.link-inscreva-se p
+{
+    position: absolute;
+    margin-left: 115px;
+}
+
+.link-inscreva-se a    
+{   
+    position: absolute;
+    margin-left: 250px;
+}
+
+/* media queries */
+
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+    
+    .group {
+        border: 1px solid transparent;
+    }
+}
+
